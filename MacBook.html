@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MacBook</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-image: url(10-12--thumb.jpg);
+                background-size: 100%;
+                user-select: none;
+
+            }
+            .upar {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.363);
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                /* padding: 4px; */
+                
+            }
+            .side{
+                margin-left: 1%;
+            }
+            .fonts{
+                font-family: 'Franklin Gothic Book';
+                font-size: 14px;
+                margin-left: 1.3%;
+            }
+            .wifi-container{
+                margin-left: 948px; /* Pushes the Wi-Fi image to the end */
+                position: relative;
+            }
+            .spacee{
+                padding: 2px;
+                margin-left: 1.3px;
+            }
+            .date-time-container {
+                display: flex;
+                align-items: center;
+                margin-left: 10px; /* Add margin for separation */
+            }
+            /* .upar2{
+                width: 100%;
+                background-color: rgba(174, 174, 174, 0.818);
+                position: fixed;
+                top: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+            } */
+            .upar img:hover{
+                transform: scale(1.6); /* Increase the scale to enlarge the image */
+                transition: transform 0.3s;
+            }
+            .niche {
+                position: fixed;
+                bottom: 1%;
+                left: 10%;
+                background-color: rgba(255, 255, 255, 0.059);
+                width: 80%; /* Adjust the width as needed */
+                padding: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid;
+                border-color: rgba(255, 255, 255, 0.092);
+                border-radius: 20px;
+            }
+            .niche img:hover {
+                transform: scale(1.6); /* Increase the scale to enlarge the image */
+                transition: transform 0.3s; /* Add a smooth transition effect */
+            }
+            .haat{
+                margin-right: 1.3%;
+                
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="upar">
+            <span class="side"><img src="Apple-Logo-removebg-preview.png" width="30" height="17" draggable="false"></span>
+            <span class="fonts"> <b >Finder</b></span>
+            <span class="fonts" >Edit</span>
+            <span class="fonts">View</span>
+            <span class="fonts">Go</span>
+            <span class="fonts">Window</span>
+            <span class="fonts">Help</span>
+            <div class="wifi-container">
+                <span class="spacee"><img src="wifi.png" alt="wifi" width="17" height="13" title="Wi-Fi" draggable="false"></span>
+                <span class="spacee"><img src="Screenshot_2023-09-22_144035-removebg-preview.png" alt="Desktop" width="17" height="13" draggable="false"></span>
+                <span class="spacee"><img src="664886-removebg-preview.png" alt="battery" width="17" height="13" title="Battery: 99%" draggable="false"></span>
+                <span class="spacee fonts" id="date">SAT 17:16 </span>
+                <span class="spacee"><img src="download-removebg-preview.png" alt="search" width="17" height="13" class="large" title="Search" draggable="false"></span>
+                <span class="spacee"><img src="Screenshot_2023-09-22_151604-removebg-preview.png" draggable="false" alt="wifi" width="21" height="16" title="Siri" class="large"></span>
+                <span class="spacee"><img src="images-removebg-preview.png" alt="menu" width="25" height="15" title="Menu" draggable="false"></span>
+            </div>
+        </div>
+        <br><br>
+        <div class="niche">
+            <span class="haat"><img src="FinderBigSur-removebg-preview.png" alt="Finder" width="40" height="40" title="Finder" draggable="false"></span>
+            <span class="haat"><img src="Launchpad-icon-removebg-preview.png" alt="Launch Pad" width="40" height="40" title="Launch Pad" draggable="false"></span>
+            <span class="haat"><img src="image_processing20200730-1740-1uvn96c-removebg.png" alt="Safari" width="48" height="40" title="Safari" draggable="false"></span>
+            <span class="haat"><img src="v9xlfyfogyl61-removebg-preview.png" alt="wifi" width="40" height="40" title="Messenger" draggable="false"></span>
+            <span class="haat"><img src="video-apple-removebg-preview.png" alt="wifi" width="39" height="37" draggable="false"></span>
+            <span class="haat"><img src="7b7bc658d3fce83780679e84dc62f2fa-removebg-preview.png" alt="wifi" width="40" height="40" draggable="false"></span>
+            <span class="haat"><img src="1082203_81_100422_5zDnd7oHL-removebg-preview.png" alt="wifi" width="49" height="38 " draggable="false"></span>
+            <span class="haat"><img src="cc4b5b0cdcd7cce0e9f8583e45df586e-removebg-preview.png" alt="wifi" width="44" height="43" draggable="false"></span>
+            <span class="haat"><img src="757601cc95e2e66b450f889d30f34337-removebg-preview.png" alt="wifi" width="48" height="50" draggable="false"></span>
+            <span class="haat"><img src="MacOSCalendar-removebg-preview.png" alt="wifi" width="42" height="43" draggable="false"></span>
+
+
+        </div>
+        <script>
+            function updateTimeAndDate() {
+                let day;
+                switch (new Date().getDay()) {
+                    case 0:
+                        day = "SUN";
+                        break;
+                    case 1:
+                        day = "MON";
+                        break;
+                    case 2:
+                        day = "TUE";
+                        break;
+                    case 3:
+                        day = "WED";
+                        break;
+                    case 4:
+                        day = "THUR";
+                        break;
+                    case 5:
+                        day = "FRI";
+                        break;
+                    case 6:
+                        day = "SAT";
+                        break;
+                    
+                    default:
+                        day = "Not defined";
+                        break;
+                }
+        
+                let hours = new Date().getHours();
+                let mins = new Date().getMinutes();
+                let timeString = hours + ":" + mins;
+                let dayAndTime = day + " " + timeString;
+        
+                let element = document.getElementById("date");
+                element.textContent = dayAndTime;
+            }
+
+            updateTimeAndDate();
+            setInterval(updateTimeAndDate, 1000);
+        </script>
+    </body>
+</html>
