@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ,<meta name="description" content="Hello this is a registration form">
+    <title>Sign Up</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(JLnKw5.jpg);
+        color: white;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+    input,button{
+        float: right;
+        outline: none;
+    }
+    button{
+        user-select: none;
+    }
+    button:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+    input{
+        border: 0;
+        border-bottom: 1px white solid;
+        background-color: transparent;
+        color: white;
+        outline: none;
+        text-align: start;
+    }
+    form{
+        width: 350px;
+        border: 1px solid;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 10px;
+    }
+    .space{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <form id="myForm">
+        <div class="space">
+            <label for="fname">First Name*</label>
+            <input type="text" id="fname" required minlength="3">
+        </div>
+        <div id="namechange" style="color: red;"></div>
+        <div class="space">
+            <label for="lname">Last Name*</label>
+            <input type="text" id="lname" required>
+        </div>
+        <div class="space">
+            <label for="email">Email*</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="space">
+            <label for="password">Password*</label>
+            <input type="password" id="password" required maxlength="9">
+        </div>
+        <div id="namee" style="color: red;"></div>
+        <div class="space">
+            <label for="confirm">Confirm Password*</label>
+            <input type="password" id="confirm" required maxlength="9">
+        </div>
+        <div style="height: 15px;"><button type="button" onclick="show();" id="show-hide">Show password</button></div>
+        <div id="change" style="color: red;"></div>
+        <div class="space">
+            <button type="button" style="background-color: red;padding: 8px;" onclick="cancel();">Cancel</button>
+            <button style="margin-right: 10px;background-color: lightgreen;padding: 8px;" onclick="pass(event);">Submit</button>
+        </div>
+    </form>
+    <script>
+        function pass(event){
+            let pass = document.getElementById("password").value;
+            let confirm1 = document.getElementById("confirm").value;
+            let n = document.getElementById("fname").value;
+            if(n.length >= 3){
+                document.getElementById("namechange").textContent = "";
+                if(pass != confirm1){
+                    document.getElementById("change").textContent = "Password does not match";
+                    event.preventDefault();
+                }
+                else{
+                    if(pass.length>=3){
+                        document.getElementById("namee").textContent = "";
+                        document.getElementById("change").textContent= "Submitted Successfully";
+                        document.getElementById("change").style.color = "lightgreen";
+                        event.preventDefault();
+                        setTimeout(function() {
+                            document.getElementById("myForm").submit();
+                        }, 2000);
+                    }
+                    else{
+                        document.getElementById("namee").textContent = "Password not big enough";
+                        event.preventDefault();
+                    }
+                }
+            }
+            else{
+                document.getElementById("namechange").textContent = "Name should be of characters 3 or more";
+                event.preventDefault();
+            }
+        }
+        function cancel(){
+            if (confirm("Do you want to cancel?")) {
+                window.location.reload();
+            }
+        }
+        function show(){
+            let p = document.getElementById("password").type;
+            let c = document.getElementById("confirm").type;
+            if(p == "password" && c == "password"){
+                document.getElementById("password").type = "text";
+                document.getElementById("confirm").type = "text";
+                document.getElementById("show-hide").textContent = "Hide password";
+            }
+            else{
+                document.getElementById("password").type = "password";
+                document.getElementById("confirm").type = "password";
+                document.getElementById("show-hide").textContent = "Show password";
+            }
+        }
+    </script>
+</body>
+</html>
