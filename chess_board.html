@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Chess Board </title>
+    </head>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .space{
+            width: 80px;
+            height: 80px;
+            display: inline-flex;
+            float: right;
+        }
+        .board {
+            border: 5px solid;
+            width: 644px;
+            height: fit-content;
+        }
+        img{
+            border: 3.5px solid;
+        }
+        img:hover{
+            border: 0px solid;
+            background-color: rgb(146, 255, 146);
+            content: "hello";
+        }
+    </style>
+    <body>
+        <div class="board" style="border: 3px solid;padding: 6px;">
+            <div style="border: 2px solid;height: 640px;float: left;"> <!-- height: 640px */ -->
+                <div class="space" style="background-color: grey;"> <img src="rook_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="knight_chess-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="black_bishop-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="king_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="queen_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="black_bishop-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="knight_chess-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="rook_black-removebg-preview.png" width="79px"></div>
+                <br>
+                <div class="space" style="background-color: white;"><img src="pawn_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="pawn_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="pawn_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="pawn_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="pawn_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="pawn_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="pawn_black-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="pawn_black-removebg-preview.png" width="79px"></div>
+                <br>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <br>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <br>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <div class="space" style="background-color: grey;"></div>
+                <div class="space" style="background-color: white;"></div>
+                <br>
+                <div class="space" style="background-color: white"></div>
+                <div class="space" style="background-color: grey"></div>
+                <div class="space" style="background-color: white"></div>
+                <div class="space" style="background-color: grey"></div>
+                <div class="space" style="background-color: white"></div>
+                <div class="space" style="background-color: grey"></div>
+                <div class="space" style="background-color: white"></div>
+                <div class="space" style="background-color: grey"></div>
+                <br>
+                <div class="space" style="background-color: grey;"><img src="pawn_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="pawn_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="pawn_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="pawn_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="pawn_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="pawn_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="pawn_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="pawn_white-removebg-preview.png" width="79px"></div>
+                <br>
+                <div class="space" style="background-color: white;"><img src="rook_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="knight_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="white_bishop-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="white_king-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="white_queen-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="white_bishop-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: white;"><img src="knight_white-removebg-preview.png" width="79px"></div>
+                <div class="space" style="background-color: grey;"><img src="rook_white-removebg-preview.png" width="79px"></div>
+                <br>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+        
+    </body>
+</html>
