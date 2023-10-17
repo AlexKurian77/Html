@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        }
+    input:not(.except){
+        transform: scale(1.5);
+    }
+    #change,#hex{
+        background-color: white;
+        border: 1px solid black;
+        padding: 5px;
+        margin-bottom: 2px;
+    }
+</style>
+<body>
+    <div>
+        <label for="red">R</label><br>
+        <input type="range" name="Red" id="red" max="255" min="0"><br>
+        <label for="green">G</label><br>
+        <input type="range" name="Green" id="green" max="255" min="0"><br>
+        <label for="blue">B</label><br>
+        <input type="range" name="Blue" id="blue" max="255" min="0"><br>
+        <input type="text" id="change" value="hello" class="except">
+        <input type="text" id="hex" value="hello" class="except">
+    </div>
+    <script>
+        function calll() {
+            //rgb bs itna sa hai
+            let red = document.getElementById("red").value;
+            let green = document.getElementById("green").value;
+            let blue = document.getElementById("blue").value;
+            let rgb = `rgb(${red}, ${green}, ${blue})`;
+            document.getElementById("change").value = rgb;
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+            //HEX KA CODE HAI NICHE SE GADDAYUM
+            let hexredx = Math.trunc(red/16);
+            let hexgreenx = Math.trunc(green/16);
+            let hexbluex = Math.trunc(blue/16);
+            function hex(a){
+                switch(a){
+                    case 10:
+                        return "A";
+                    case 11:
+                        return "B";
+                    case 12:
+                        return "C";
+                    case 13:
+                        return "D";
+                    case 14:
+                        return "E";
+                    case 15:
+                        return "F";
+                    default:
+                        return "Not possible";
+                }
+            }
+            let hexred,hexblue,hexgreen;
+            let re,RedY;
+            let RY = red%16
+            if(hexredx > 9){
+                re = hex(hexredx);
+                if(RY>9){
+                    RedY = hex(RY);
+                    hexred = ""+re + RedY;
+                }
+                else{
+                    RedY = RY;
+                    hexred = ""+re + RedY;
+                }
+            }
+            else{
+                if(RY>9){
+                    RedY = hex(RY);
+                    hexred = ""+hexredx + RedY;
+                }
+                else{
+                    RedY = RY;
+                    hexred = ""+hexredx + RedY;
+                }
+            }
+            let EndHexRed = hexred.toString().padEnd(2,'0');
+            let gr,GreenY;
+            let GY = green%16;
+            if(hexgreenx > 9){
+                gr = hex(hexgreenx);
+                if(GY>9){
+                    GreenY = hex(GY);
+                    hexgreen = ""+gr + GreenY;
+                }
+                else{
+                    GreenY = GY;
+                    hexgreen = ""+gr + GreenY;
+                }
+            }
+            else{
+                if(GY>9){
+                    GreenY = hex(GY);
+                    hexgreen = ""+hexgreenx + GreenY;
+                }
+                else{
+                    GreenY = GY;
+                    hexgreen = ""+hexgreenx + GreenY;
+                }
+            }
+            let EndHexGreen = hexgreen.toString().padEnd(2,'0');
+            let bl,BlueY;
+            let BY = blue%16
+            if(hexbluex > 9){
+                bl = hex(hexbluex);
+                if(BY>9){
+                    BlueY = hex(BY);
+                    hexblue = ""+bl + BlueY;
+                }
+                else{
+                    BlueY = BY;
+                    hexblue = ""+bl + BlueY;
+                }
+            }
+            else{
+                if(BY>9){
+                    BlueY = hex(BY);
+                    hexblue = ""+hexbluex + BlueY;
+                }
+                else{
+                    BlueY = BY;
+                    hexblue = ""+hexbluex + BlueY;
+                }
+            }
+            let EndHexBlue = hexblue.toString().padEnd(2,'0');
+
+            let hex1 = "Hex: #"+EndHexRed+EndHexGreen+EndHexBlue;
+            document.getElementById("hex").value = hex1;
+            
+        }
+        calll();
+        setInterval(calll, 100);
+    </script>
+</body>
+</html>
