@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander's Website</title>
+    <style>
+    body{
+        background: linear-gradient(rgb(75, 75, 75),rgb(19, 19, 19));
+        /* background-color: rgb(75, 75, 75); */
+        color: white;
+        margin: 0;
+        padding: 0;
+        /* user-select: none; */
+        overflow-x: hidden;
+    }
+    .header{
+        display: flex;
+        gap: 30px;
+        border: 0;
+        border-bottom: 1px solid;
+        align-items: center;
+        background-color: rgb(41, 39, 39);
+        font-family: 'Agency FB';
+    }
+    .onhover1{
+        border-radius: 20px;
+        padding: 0;
+        position: relative;
+        left: 2%;
+    }
+    .onhover1:hover{
+        cursor: pointer;
+        color: #257298;
+        transition: 0.3s;
+    }
+    .arrow1{
+        display: inline-block;
+        transition: transform 0.7s;
+    }
+    .onhover1:hover .arrow1{
+        transform: rotate(-180deg);
+    }
+    .logo {
+        margin-left: 18%;
+        margin-right: auto;
+        text-align: center;
+    }
+    .space{
+        margin-right: 9px;
+        cursor: pointer;
+    }
+    .spacee{
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    .sub-head{
+        display: flex;
+        align-items: center;
+    }
+    .login{
+        background-color: #18455b;
+        border-radius: 7px;
+        padding: 6px;
+        padding-left: 20px;
+        padding-right: 20px;
+        user-select: none;
+        margin-right: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .second-head{
+        display: flex;
+        align-items: center;
+        height: 40px;
+        font-family: 'Arial Narrow';
+        justify-content: center;
+        background-color: rgb(41, 39, 39);
+    }
+    .word-space{
+        margin-right: 6px;
+        margin-left: 6px;
+        cursor: pointer;
+        font-family: 'Bahnschrift Light Condensed';
+        font-size: 14px;
+    }
+    .word-space:hover{
+        color: #257298;
+        transition: 0.4s;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        /* border: 1px solid; */
+        top: 40px;
+        font-family: 'Sitka Text Semibold';
+    }
+    .sps{
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 20px;
+        border: 0;
+        font-size: 15px;
+    }
+    .DSA{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+    .back{
+        background-color: rgb(41, 39, 39);
+        padding: 7px;
+        padding-left: 9px;
+        padding-right: 9px;
+        border-radius: 5px;
+        font-size: 13.5px;
+        cursor: pointer;
+    }
+    .boxes{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 17%;
+        gap: 40px;
+        background: linear-gradient(rgb(44, 41, 41),black);
+        height: 400px;
+        width: 67%;
+        border-radius: 20px;
+    }
+    .box{
+        /* border: 1px solid; */
+        position: relative;
+        width: 270px;
+        height: 200px;
+        background-color: rgb(41, 39, 39);
+        word-wrap: normal;
+        border-radius: 10px;
+        top: 25px;
+        /* padding: 1px; */
+    }
+    .read{
+        background-image: url(read.png);
+        width: auto;
+        height: 70px;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    
+    .practice{
+        background-image: url(practice.png);
+        width: auto;
+        height: 70px;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    .learn{
+        background-image: url(learn.png);
+        width: auto;
+        height: 70px;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    .box:hover{
+        border: 2px solid;
+        cursor: pointer;
+        /* transition: 0.2s; */
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="onhover1">
+            Courses <span class="arrow1"><b>⮛</b></span>
+        </span>
+        <span class="onhover1">
+            Tutorials <span class="arrow1"><b>⮛</b></span>
+        </span>
+        <span class="onhover1">
+            Jobs <span class="arrow1"><b>⮛</b></span>
+        </span>
+        <span class="onhover1">
+            Practice <span class="arrow1"><b>⮛</b></span>
+        </span>
+        <span class="onhover1">
+            Contests <span class="arrow1"><b>⮛</b></span>
+        </span>
+        <span class="logo"><img src="photo_2023-10-02_18-20-48-removebg-preview.png" alt="logo" width="120px" height="50" draggable="false"></span>
+        <div class="sub-head">
+            <span ><img src="pngtree-vector-find-icon-png-image_854997-removebg-preview.png" width="21" height="21" class="space" draggable="false"></span>
+            <span><img src="images-removebg-preview (1).png" width="23" height="23" class="space" draggable="false"></span>
+            <span><img src="Screenshot_2023-10-02_142323-removebg-preview.png" width="28" height="23" class="spacee" draggable="false"></span>
+            <a href="AnimatedRegistration.html"><span class="login">LOGIN</span></a>
+        </div>
+    </div>
+    <div class="second-head">
+        <span class="word-space">Trending Now</span>
+        <span class="word-space">Data Structures</span>
+        <span class="word-space">Algorithms</span>
+        <span class="word-space">Foundational Courses</span>
+        <span class="word-space">Data Science</span>
+        <span class="word-space">Practice Problem</span>
+        <span class="word-space">Python</span>
+        <span class="word-space">Machine Learning</span>
+        <span class="word-space">JavaScript</span>
+        <span class="word-space">Java</span>
+        <span class="word-space">C</span>
+        <span class="word-space">C++</span>
+        <span class="word-space">ReactJS</span>
+        <span class="word-space">NodeJS</span>
+        <span class="word-space">Competitive Programming</span>
+        <span class="word-space">Aptitude</span>
+        <span class="word-space">Web Development</span>
+    </div>
+    <div class="content">
+        <h2>Hello, What Do You Want to Learn?</h2>
+    </div>
+    <br><br><br>
+    <div class="DSA">
+        <input type="text" class = "sps" placeholder="Enter the topic                🔍">
+    </div>
+    <br><br>
+    <div class="DSA">
+        <snap class="back">Data Science & ML</snap>
+        <snap class="back">Gate: DS & AI</snap>
+        <snap class="back">DSA: Basic to Advanced Course</snap>
+    </div>
+    <br><br><br><br><br>
+    <div class="boxes">
+        <div class="box">
+            <div class="read"></div><br>
+            <span style="font-size: 21px;font-family: 'Imprint MT Shadow';margin-left: 2px;">How To List Installed Py...</span><br><br>
+            <span style="padding-left: 2px;display: flex;justify-content: center;">Working on Python projects may require you to list the installed Python packages in order to mana...</span>
+        </div>
+        <div class="box">
+            <div class="practice"></div><br>
+            <span style="font-size: 21px;font-family: 'Imprint MT Shadow';margin-left: 2px;">Explore Practice Problems</span><br><br>
+            <span style="padding-left: 2px;display: flex;justify-content: center;">Solve DSA Problems. Filter based on topic tags and company tags. Get curated problem lists by GFG ex...</span>
+        </div>
+        <div class="box">
+            <div class="learn"></div><br>
+            <span style="font-size: 21px;font-family: 'Imprint MT Shadow';margin-left: 2px;position: relative;left: 2px;">Interview Preparation</span><br><br>
+            <span style="padding-left: 2px;display: flex;justify-content: center;">An interview-centric course designed to prepare you for the role of SDE for both product and service...</span>
+        </div>
+    </div>
+</body>
+</html>
