@@ -40,7 +40,7 @@
         text-align: start;
         outline: none;
         padding-bottom: 3px;
-        padding-right: 90px;
+        width: 290px;
     }
     .input-container:hover label {
         transform: translateY(-20px);
@@ -100,7 +100,7 @@
             <div class="input-container">
                 <input type="password" id="pass" required onfocus="transformLabel(this)">
                 <label for="password">Password</label>
-                <span id="show" class="show" title="show/hide" onclick="show();">🔒</span>
+                <span id="show" class="show" title="Show/Hide Password" onclick="show();">🔒</span>
 
                 <!-- <img src="lock-removebg-preview.png" width="39" height="39"> -->
 
@@ -108,7 +108,7 @@
             <div style="margin-left: 40%;">
                 <input class="exc" type="checkbox" id="checkbox">
                 <label class="exception" for="Remembers" style="color: white;">Remember Me</label>
-            </div><br><br>`
+            </div><br><br>
             <div>
                 <a href="#" class="aa">Forgot Password</a>
             </div><br><br>
@@ -120,7 +120,7 @@
         function transformLabel(input) {
             // Move the label to its transformed position
             const label = input.nextElementSibling; // Get the label element
-            label.style.transform = "translateY(-20px)";
+            label.style.transform = "translateY(-15px)";
         }
         function show(){
             let change = document.getElementById("pass");
